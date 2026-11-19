@@ -542,7 +542,7 @@ final class AppModel {
         lastWrongEntry = nil
         result = nil
         door = nil
-        withAnimation(reduceMotion ? nil : .spring(response: 0.42, dampingFraction: 0.86)) {
+        withAnimation(reduceMotion ? nil : .easeOut(duration: 0.3)) {
             screen = .daily
         }
         play(.page)

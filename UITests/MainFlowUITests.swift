@@ -34,6 +34,7 @@ enum MainFlow {
         .tap("main.records"),
         .tap("main.closeRecords"),
         .tap("main.daily"),
+        .wait(1.5),
         .tap("main.hint"),
         .tap("main.closeDaily"),
     ]

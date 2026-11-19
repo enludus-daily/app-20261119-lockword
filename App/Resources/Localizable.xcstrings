@@ -276,6 +276,17 @@
         }
       }
     },
+    "ここから": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start here"
+          }
+        }
+      }
+    },
     "この 4 週間で %d 日": {
       "extractionState": "manual",
       "localizations": {

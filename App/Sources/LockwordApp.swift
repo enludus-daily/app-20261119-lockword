@@ -35,7 +35,7 @@ struct RootView: View {
                         .transition(.opacity)
                 case .daily:
                     DailyView()
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                        .transition(.opacity)
                 }
             }
             if let b = model.banner {

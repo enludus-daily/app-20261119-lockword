@@ -186,6 +186,18 @@ struct ObjectButton: View {
                     }
                     ObjectArt(kind: object.kind, solved: op.solved, locked: needsItem && !canOpen)
                     badge(op: op, needsItem: needsItem, canOpen: canOpen, item: object.requires)
+                    if roomIndex == 0 && objectIndex == 0 && progress.solvedCount == 0 && op.cells.isEmpty {
+                        // 最初の 10 秒：どこから触ればよいか
+                        Text(tr("ここから", "Start here"))
+                            .font(Typo.label(11)).kerning(0.6)
+                            .foregroundStyle(Ink.ink)
+                            .padding(.horizontal, 8).padding(.vertical, 4)
+                            .background(Capsule().fill(Ink.glow))
+                            .overlay(Capsule().stroke(Ink.brassDeep, lineWidth: 1))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                            .offset(y: 6)
+                            .allowsHitTesting(false)
+                    }
                 }
                 .frame(maxHeight: .infinity)
                 BrassPlate(padding: 6) {
