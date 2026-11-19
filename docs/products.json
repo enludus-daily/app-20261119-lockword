@@ -3,15 +3,23 @@
   "products": [
     {
       "type": "NON_CONSUMABLE",
-      "productId": "com.enludus.daily.template.pro",
-      "referenceName": "Pro",
+      "productId": "com.enludus.daily.014.pro",
+      "referenceName": "Lockword Pro",
       "price": 480,
       "familySharable": true,
-      "reviewNote": "Pro を買うと、すべての〇〇と詳しい振り返りが使えます。課金の画面は設定 > Pro から開けます。",
+      "reviewNote": "Pro を買うと、屋敷の残り 2 部屋（天文室・時計塔。物 8 つ・言葉 32）、ヒントの 3 段目（答えを見せる）の無制限、過去 14 日の今日の小部屋が使えます。課金の画面は 広間 > 設定 > 屋敷のすべての部屋を開く から開けます。",
       "reviewScreenshot": "docs/iap/paywall.png",
       "localizations": [
-        {"locale": "ja", "name": "Pro", "description": "すべての〇〇と詳しい振り返り"},
-        {"locale": "en-US", "name": "Pro", "description": "All 〇〇 and detailed reviews"}
+        {
+          "locale": "ja",
+          "name": "カギことば Pro",
+          "description": "残り2部屋・答えのヒント・過去14日の小部屋"
+        },
+        {
+          "locale": "en-US",
+          "name": "Lockword Pro",
+          "description": "2 more rooms, answer hints, 14 days of past nooks"
+        }
       ]
     }
   ]

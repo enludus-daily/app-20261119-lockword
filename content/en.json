@@ -1,0 +1,840 @@
+{
+ "rooms": [
+  {
+   "id": "study",
+   "title": "The Earl's Study",
+   "subtitle": "Room One",
+   "intro": "You wake in a study lit by a single lamp. The door has four letter dials. Every object on the walls hides a tiny crossword.",
+   "outro": "The last letter clicks into place and the lock falls open. Down the hall, a gramophone starts to play.",
+   "final": "LORE",
+   "finalClue": "The old stories and secrets of a place",
+   "objects": [
+    {
+     "kind": "painting",
+     "name": "The Earl's Portrait",
+     "note": "Something is tucked behind the frame",
+     "requires": null,
+     "gives": "key",
+     "item": "KEY",
+     "words": [
+      [
+       "KEY",
+       "Opens a lock",
+       "Turn it in the keyhole"
+      ],
+      [
+       "FRAME",
+       "Border around a painting",
+       "It holds a portrait on the wall"
+      ],
+      [
+       "EARL",
+       "Noble who owned this house",
+       "A British count"
+      ],
+      [
+       "OIL",
+       "Paint used for old portraits",
+       "___ on canvas"
+      ]
+     ]
+    },
+    {
+     "kind": "chest",
+     "name": "Locked Chest",
+     "note": "An old lock. A key would open it",
+     "requires": "key",
+     "gives": "candle",
+     "item": "CANDLE",
+     "words": [
+      [
+       "CANDLE",
+       "Wax stick with a wick",
+       "Blow it out on a birthday"
+      ],
+      [
+       "LID",
+       "Top of a chest",
+       "Close the ___"
+      ],
+      [
+       "OAK",
+       "Hard wood for old furniture",
+       "Grows from an acorn"
+      ],
+      [
+       "DUST",
+       "Gray powder on old things",
+       "Wipe it off a shelf"
+      ]
+     ]
+    },
+    {
+     "kind": "bookshelf",
+     "name": "Towering Bookshelf",
+     "note": "One book is shelved upside down",
+     "requires": null,
+     "gives": "gear",
+     "item": "GEAR",
+     "words": [
+      [
+       "GEAR",
+       "Toothed wheel in a machine",
+       "Cogs turn in a clock"
+      ],
+      [
+       "NOVEL",
+       "Long story in a book",
+       "A work of fiction"
+      ],
+      [
+       "READ",
+       "What you do with a book",
+       "Past tense sounds like a color"
+      ],
+      [
+       "ATLAS",
+       "Book of maps",
+       "A Titan who held up the sky"
+      ]
+     ]
+    },
+    {
+     "kind": "desk",
+     "name": "The Earl's Desk",
+     "note": "The drawer has a gear-shaped slot",
+     "requires": "gear",
+     "gives": "lens",
+     "item": "LENS",
+     "words": [
+      [
+       "LENS",
+       "Curved glass that magnifies",
+       "In a camera or magnifier"
+      ],
+      [
+       "INK",
+       "Liquid for a pen",
+       "Squids squirt it too"
+      ],
+      [
+       "NOTE",
+       "Short written message",
+       "Leave a ___ on the desk"
+      ],
+      [
+       "SEAL",
+       "Wax stamp on a letter",
+       "Also a sea animal"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "music",
+   "title": "The Moonlit Music Room",
+   "subtitle": "Room Two",
+   "intro": "The hall leads to a music room. A gramophone repeats the same bar. The lock wants four letters of sound.",
+   "outro": "The dials chime and the door swings open. Starlight spills down the stairs above.",
+   "final": "TUNE",
+   "finalClue": "A melody you can hum",
+   "objects": [
+    {
+     "kind": "gramophone",
+     "name": "Endless Gramophone",
+     "note": "Something glints inside the horn",
+     "requires": null,
+     "gives": "ring",
+     "item": "RING",
+     "words": [
+      [
+       "RING",
+       "Band worn on a finger",
+       "Wedding ___"
+      ],
+      [
+       "RECORD",
+       "Vinyl disc you play",
+       "Spin it on a turntable"
+      ],
+      [
+       "WALTZ",
+       "Dance in three beats",
+       "One-two-three, one-two-three"
+      ],
+      [
+       "NEEDLE",
+       "It rides the groove of a record",
+       "Also used for sewing"
+      ]
+     ]
+    },
+    {
+     "kind": "safe",
+     "name": "Wall Safe",
+     "note": "A ring is engraved on the dial",
+     "requires": "ring",
+     "gives": "coin",
+     "item": "COIN",
+     "words": [
+      [
+       "COIN",
+       "Small metal money",
+       "Heads or tails"
+      ],
+      [
+       "DIAL",
+       "Knob you turn on a safe",
+       "Spin it to a number"
+      ],
+      [
+       "NUMBER",
+       "One part of a code",
+       "Seven is one"
+      ],
+      [
+       "DRUM",
+       "Instrument you hit",
+       "Snare or bass"
+      ]
+     ]
+    },
+    {
+     "kind": "fireplace",
+     "name": "Cold Fireplace",
+     "note": "Metal glints in the ashes",
+     "requires": null,
+     "gives": "key",
+     "item": "KEY",
+     "words": [
+      [
+       "KEY",
+       "Winds a clock, or opens a lock",
+       "Found in the ashes"
+      ],
+      [
+       "EMBER",
+       "Glowing bit of coal",
+       "Left after the flames"
+      ],
+      [
+       "SMOKE",
+       "Rises from a fire",
+       "Where there's ___, there's fire"
+      ],
+      [
+       "CHIMNEY",
+       "Lets smoke out of the house",
+       "Santa comes down it"
+      ]
+     ]
+    },
+    {
+     "kind": "clock",
+     "name": "Grandfather Clock",
+     "note": "There's a winding hole. It has stopped",
+     "requires": "key",
+     "gives": "gear",
+     "item": "GEAR",
+     "words": [
+      [
+       "GEAR",
+       "Toothed wheel inside a clock",
+       "Cog"
+      ],
+      [
+       "HAND",
+       "Pointer on a clock face",
+       "Hour ___"
+      ],
+      [
+       "CHIME",
+       "Ringing sound of a clock",
+       "Ding, dong"
+      ],
+      [
+       "NOON",
+       "Twelve o'clock in the day",
+       "High ___"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "observatory",
+   "title": "The Attic Observatory",
+   "subtitle": "Room Three",
+   "intro": "A telescope and a globe sit under a round skylight. The door's dials are marked with four stars.",
+   "outro": "Four stars light up and the skylight slides open. Far away, the clock tower bell rings.",
+   "final": "STAR",
+   "finalClue": "It twinkles in the night sky",
+   "objects": [
+    {
+     "kind": "telescope",
+     "name": "Brass Telescope",
+     "note": "A rolled paper is stuck in the tube",
+     "requires": null,
+     "gives": "map",
+     "item": "MAP",
+     "words": [
+      [
+       "MAP",
+       "Drawing of where things are",
+       "Treasure ___"
+      ],
+      [
+       "ORBIT",
+       "Path around a planet",
+       "The Moon's path around Earth"
+      ],
+      [
+       "COMET",
+       "Icy body with a glowing tail",
+       "Halley's ___"
+      ],
+      [
+       "SPACE",
+       "Where stars and planets are",
+       "Outer ___"
+      ]
+     ]
+    },
+    {
+     "kind": "globe",
+     "name": "Frozen Globe",
+     "note": "The stand has a slot for a map",
+     "requires": "map",
+     "gives": "compass",
+     "item": "COMPASS",
+     "words": [
+      [
+       "COMPASS",
+       "Its needle points north",
+       "A sailor's tool"
+      ],
+      [
+       "NORTH",
+       "Where a compass points",
+       "Opposite of south"
+      ],
+      [
+       "ISLAND",
+       "Land with water all around",
+       "Treasure ___"
+      ],
+      [
+       "WEST",
+       "Where the sun sets",
+       "Opposite of east"
+      ]
+     ]
+    },
+    {
+     "kind": "bookshelf",
+     "name": "Star Chart Shelf",
+     "note": "A small key hangs at the back",
+     "requires": null,
+     "gives": "key",
+     "item": "KEY",
+     "words": [
+      [
+       "KEY",
+       "Hung at the back of the shelf",
+       "Opens a lock"
+      ],
+      [
+       "GALAXY",
+       "Huge group of stars",
+       "The Milky Way is one"
+      ],
+      [
+       "MYSTERY",
+       "Something to solve",
+       "A whodunit"
+      ],
+      [
+       "SKY",
+       "Blue by day, starry by night",
+       "The ___'s the limit"
+      ]
+     ]
+    },
+    {
+     "kind": "chest",
+     "name": "Astronomer's Box",
+     "note": "The keyhole is shaped like a star",
+     "requires": "key",
+     "gives": "candle",
+     "item": "CANDLE",
+     "words": [
+      [
+       "CANDLE",
+       "Wax light with a wick",
+       "Light one in a blackout"
+      ],
+      [
+       "AURORA",
+       "Lights dancing in polar skies",
+       "Northern lights"
+      ],
+      [
+       "NIGHT",
+       "When the stars come out",
+       "Opposite of day"
+      ],
+      [
+       "STAR",
+       "Twinkle, twinkle, little ___",
+       "The Sun is one"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tower",
+   "title": "Top of the Clock Tower",
+   "subtitle": "Room Four",
+   "intro": "Behind the giant clock face, gears creak. The hands stopped just before midnight. The last door leads outside.",
+   "outro": "The bell rings twelve times. Beyond the door, the town waits before dawn. You made it out.",
+   "final": "TIME",
+   "finalClue": "What every clock measures",
+   "objects": [
+    {
+     "kind": "clock",
+     "name": "Back of the Great Clock",
+     "note": "One gear is coming loose",
+     "requires": null,
+     "gives": "gear",
+     "item": "GEAR",
+     "words": [
+      [
+       "GEAR",
+       "Toothed wheel that turns",
+       "Cog"
+      ],
+      [
+       "TOWER",
+       "Tall building with a clock",
+       "Big Ben stands in one"
+      ],
+      [
+       "SPRING",
+       "Coil that stores power",
+       "Also a season"
+      ],
+      [
+       "WATCH",
+       "Clock you wear",
+       "Wrist___"
+      ]
+     ]
+    },
+    {
+     "kind": "chest",
+     "name": "Clockmaker's Box",
+     "note": "The lid has a hole for a gear",
+     "requires": "gear",
+     "gives": "ring",
+     "item": "RING",
+     "words": [
+      [
+       "RING",
+       "Band worn on a finger",
+       "Engraved inside"
+      ],
+      [
+       "WINE",
+       "Drink made from grapes",
+       "Red or white"
+      ],
+      [
+       "JEWEL",
+       "Precious stone",
+       "Crown ___"
+      ],
+      [
+       "INITIAL",
+       "First letter of a name",
+       "Engraved inside a ring"
+      ]
+     ]
+    },
+    {
+     "kind": "painting",
+     "name": "Unfinished Painting",
+     "note": "Something hard and round under the paint",
+     "requires": null,
+     "gives": "coin",
+     "item": "COIN",
+     "words": [
+      [
+       "COIN",
+       "Small metal money",
+       "Heads or tails"
+      ],
+      [
+       "EASEL",
+       "Stand that holds a painting",
+       "An artist's tripod"
+      ],
+      [
+       "MODEL",
+       "Person who sits for a portrait",
+       "Pose for the artist"
+      ],
+      [
+       "PENCIL",
+       "Wooden tool for sketching",
+       "HB or 2B"
+      ]
+     ]
+    },
+    {
+     "kind": "safe",
+     "name": "Tower Safe",
+     "note": "It has a thin slot for a coin",
+     "requires": "coin",
+     "gives": "key",
+     "item": "KEY",
+     "words": [
+      [
+       "KEY",
+       "Big one for the final door",
+       "Opens a lock"
+      ],
+      [
+       "DOOR",
+       "Way in and out of a room",
+       "Open the ___"
+      ],
+      [
+       "EXIT",
+       "Way out",
+       "Sign over a door"
+      ],
+      [
+       "STAIRS",
+       "Steps that go up or down",
+       "Climb the ___"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "daily": [
+  {
+   "title": "The Kitchen Nook",
+   "kind": "desk",
+   "words": [
+    [
+     "SPOON",
+     "Tool for soup",
+     "Silver ___"
+    ],
+    [
+     "BREAD",
+     "Baked loaf",
+     "___ and butter"
+    ],
+    [
+     "PAN",
+     "Flat cooking pot",
+     "Frying ___"
+    ],
+    [
+     "ONION",
+     "Bulb that makes you cry",
+     "It has layers"
+    ],
+    [
+     "OVEN",
+     "Box that bakes",
+     "Preheat the ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Seaside Nook",
+   "kind": "globe",
+   "words": [
+    [
+     "WAVE",
+     "Moving ridge of water",
+     "Surfers ride it"
+    ],
+    [
+     "SHELL",
+     "Hard home of a clam",
+     "Find it on the beach"
+    ],
+    [
+     "HARBOR",
+     "Where ships dock",
+     "Pearl ___"
+    ],
+    [
+     "GULL",
+     "White sea bird",
+     "Sea___"
+    ],
+    [
+     "BOAT",
+     "Floats and carries people",
+     "Row, row, row your ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Garden Nook",
+   "kind": "painting",
+   "words": [
+    [
+     "ROSE",
+     "Thorny flower",
+     "A ___ by any other name"
+    ],
+    [
+     "SEED",
+     "Plant it to grow",
+     "Sunflower ___"
+    ],
+    [
+     "HOSE",
+     "Long tube for water",
+     "Garden ___"
+    ],
+    [
+     "TULIP",
+     "Cup-shaped spring flower",
+     "Holland's flower"
+    ],
+    [
+     "ROOT",
+     "Underground part of a plant",
+     "Square ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Rainy Nook",
+   "kind": "fireplace",
+   "words": [
+    [
+     "CLOUD",
+     "Gray thing in the sky",
+     "Rain falls from it"
+    ],
+    [
+     "PUDDLE",
+     "Pool left after rain",
+     "Jump in it with boots"
+    ],
+    [
+     "DROP",
+     "Tiny bit of rain",
+     "Rain___"
+    ],
+    [
+     "STORM",
+     "Wild weather",
+     "Thunder___"
+    ],
+    [
+     "MUD",
+     "Wet dirt",
+     "Clear as ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Travel Nook",
+   "kind": "globe",
+   "words": [
+    [
+     "TICKET",
+     "Pass to ride",
+     "One-way ___"
+    ],
+    [
+     "TRAIN",
+     "It runs on rails",
+     "Choo-choo"
+    ],
+    [
+     "BAG",
+     "Holds your things",
+     "Pack your ___"
+    ],
+    [
+     "PHOTO",
+     "Picture you take",
+     "Say cheese"
+    ],
+    [
+     "STATION",
+     "Where trains stop",
+     "Train ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Forest Nook",
+   "kind": "bookshelf",
+   "words": [
+    [
+     "TREE",
+     "Tall plant with a trunk",
+     "Family ___"
+    ],
+    [
+     "ACORN",
+     "Nut of an oak",
+     "Squirrels bury it"
+    ],
+    [
+     "MOSS",
+     "Soft green on rocks",
+     "A rolling stone gathers none"
+    ],
+    [
+     "OWL",
+     "Night bird that hoots",
+     "Wise old ___"
+    ],
+    [
+     "LEAF",
+     "Green part of a tree",
+     "Turn over a new ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Sound Nook",
+   "kind": "gramophone",
+   "words": [
+    [
+     "FLUTE",
+     "Pipe held sideways and blown",
+     "Silver wind instrument"
+    ],
+    [
+     "SONG",
+     "Music with words",
+     "Sing a ___"
+    ],
+    [
+     "ECHO",
+     "Sound that comes back",
+     "Hello... hello..."
+    ],
+    [
+     "LOUD",
+     "Not quiet",
+     "Turn it down!"
+    ],
+    [
+     "BELL",
+     "Rings ding-dong",
+     "Wedding ___"
+    ]
+   ]
+  },
+  {
+   "title": "The Winter Nook",
+   "kind": "fireplace",
+   "words": [
+    [
+     "SNOW",
+     "White flakes",
+     "___man"
+    ],
+    [
+     "SCARF",
+     "Wrapped around your neck",
+     "Knitted ___"
+    ],
+    [
+     "FROST",
+     "Ice on the window",
+     "Jack ___"
+    ],
+    [
+     "SLED",
+     "Ride it downhill",
+     "It has runners"
+    ],
+    [
+     "COCOA",
+     "Hot chocolate drink",
+     "Top it with marshmallows"
+    ]
+   ]
+  },
+  {
+   "title": "The Classroom Nook",
+   "kind": "desk",
+   "words": [
+    [
+     "CHALK",
+     "Writes on a board",
+     "White stick"
+    ],
+    [
+     "DESK",
+     "Where you sit and work",
+     "School ___"
+    ],
+    [
+     "CLASS",
+     "Group of students",
+     "First ___"
+    ],
+    [
+     "LESSON",
+     "What a teacher gives",
+     "Learn your ___"
+    ],
+    [
+     "RULER",
+     "Draws straight lines",
+     "Also a king"
+    ]
+   ]
+  },
+  {
+   "title": "The Tea Nook",
+   "kind": "chest",
+   "words": [
+    [
+     "TEAPOT",
+     "Pot for brewing tea",
+     "Short and stout"
+    ],
+    [
+     "CUP",
+     "Small drinking vessel",
+     "World ___"
+    ],
+    [
+     "KETTLE",
+     "Boils water",
+     "Whistles when ready"
+    ],
+    [
+     "SCONE",
+     "Baked treat with cream",
+     "With jam and clotted cream"
+    ],
+    [
+     "LEMON",
+     "Sour yellow fruit",
+     "A slice in your tea"
+    ]
+   ]
+  }
+ ]
+}

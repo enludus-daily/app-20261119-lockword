@@ -1,5 +1,5 @@
 import Testing
-@testable import DailyApp
+@testable import Lockword
 
 struct EntitlementsTests {
     let bundle = "com.enludus.daily.template"
