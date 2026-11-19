@@ -86,14 +86,14 @@ struct OnboardingView: View {
                 MiniGrid(word: Lang.isJapanese ? ["カ", "ギ"] : ["K", "E", "Y"], filled: 1)
             }
         default:
-            HStack(spacing: 16) {
+            HStack(spacing: 8) {
                 MiniGrid(word: Lang.isJapanese ? ["カ", "ギ"] : ["K", "E", "Y"], filled: 3)
                 Image(systemName: "arrow.right").font(.title2).foregroundStyle(Ink.brass)
-                ItemGlyph(kind: .key).frame(width: 70, height: 70)
+                ItemGlyph(kind: .key).frame(width: 46, height: 46)
                     .padding(10)
                     .background(Circle().fill(Ink.deep.opacity(0.8)))
                 Image(systemName: "arrow.right").font(.title2).foregroundStyle(Ink.brass)
-                ObjectArt(kind: .chest, solved: true).frame(width: 90, height: 90)
+                ObjectArt(kind: .chest, solved: true).frame(width: 64, height: 64)
             }
         }
     }
@@ -110,7 +110,7 @@ struct MiniGrid: View {
                 Text(i < filled ? l : "")
                     .font(Typo.title(24, .bold))
                     .foregroundStyle(Ink.ink)
-                    .frame(width: 42, height: 42)
+                    .frame(width: 36, height: 36)
                     .background(RoundedRectangle(cornerRadius: Radius.cell).fill(i < filled ? Ink.solved : Ink.paper))
                     .overlay(RoundedRectangle(cornerRadius: Radius.cell).strokeBorder(i == filled ? Ink.brassDeep : Ink.inkSoft.opacity(0.35), lineWidth: i == filled ? 2.5 : 0.8))
             }

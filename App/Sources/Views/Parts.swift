@@ -82,6 +82,7 @@ struct Parchment: View {
             }
         }
         .allowsHitTesting(false)
+        .accessibilityHidden(true)
     }
 }
 

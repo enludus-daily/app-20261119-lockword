@@ -191,6 +191,7 @@ final class AppModel {
         if !roomProgress(i).introSeen && !roomProgress(i).escaped {
             showIntro = true
         }
+        elapsed = roomProgress(i).seconds
         startClock()
     }
 
@@ -415,12 +416,12 @@ final class AppModel {
                 }
             }
         } else if screen == .daily {
+            stopClock()
             let key = Progress.dailyKey(Progress.dayKey(dailyDate, calendar: calendar), japanese: japanese)
             var d = progress.daily[key] ?? DailyResult()
             d.solved = true
             d.stars = b.stars
             progress.daily[key] = d
-            stopClock()
             Task {
                 try? await Task.sleep(for: .milliseconds(still ? 0 : 900))
                 self.escapeTick += 1
@@ -545,6 +546,7 @@ final class AppModel {
             screen = .daily
         }
         play(.page)
+        elapsed = saved?.seconds ?? 0
         if saved?.solved == true {
             result = .daily
         } else {
@@ -567,22 +569,35 @@ final class AppModel {
     }
 
     private func stopClock() {
+        flushClock()
         clock?.cancel()
         clock = nil
     }
 
-    var active = true
+    var active = true {
+        didSet { if !active { flushClock() } }
+    }
+
+    /// いまの部屋・小部屋の経過秒。毎秒は保存せず（記録全体を書き直すと重い）、離れる・解けるときに記録へ書く
+    var elapsed = 0
 
     private func tickClock() {
-        guard active, result == nil, !showIntro else { return }
+        guard active, result == nil, !showIntro, screen != .home else { return }
+        elapsed += 1
+    }
+
+    /// 経過秒を記録に書く
+    func flushClock() {
+        guard clock != nil else { return }
         switch screen {
         case .room(let r):
-            updateRoom(r) { $0.seconds += 1 }
+            let e = elapsed
+            if roomProgress(r).seconds != e { updateRoom(r) { $0.seconds = e } }
         case .daily:
             let key = Progress.dailyKey(Progress.dayKey(dailyDate, calendar: calendar), japanese: japanese)
             var d = progress.daily[key] ?? DailyResult()
-            if !d.solved {
-                d.seconds += 1
+            if d.seconds != elapsed {
+                d.seconds = elapsed
                 progress.daily[key] = d
             }
         case .home:

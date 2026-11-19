@@ -31,7 +31,7 @@ struct RoomView: View {
                     .accessibilityHidden(model.openObject != nil || model.door != nil || model.showIntro)
                 if let board = model.board, let o = model.openObject {
                     ZStack {
-                        Ink.deep.opacity(0.96).ignoresSafeArea()
+                        Ink.deep.ignoresSafeArea()
                         BoardPanel(board: board, title: room.objects[o].name, subtitle: room.title)
                             .padding(.horizontal, 16)
                             .padding(.top, 8)
@@ -79,10 +79,7 @@ struct RoomView: View {
             }
             Spacer()
             VStack(alignment: .trailing, spacing: 2) {
-                Text(clockText(progress.seconds))
-                    .font(Typo.title(17, .medium))
-                    .monospacedDigit()
-                    .foregroundStyle(Ink.brassSoft)
+                ClockLabel()
                 Text(trf("文字盤 %d / %d", "Dials %d / %d", progress.solvedCount, room.objects.count))
                     .font(Typo.label(10))
                     .foregroundStyle(Ink.onWallSoft)
@@ -338,5 +335,17 @@ struct StoryCard: View {
             .padding(.horizontal, 24)
             .frame(maxWidth: 480)
         }
+    }
+}
+
+/// 経過時間（毎秒変わるので、ここだけが描き直される）
+struct ClockLabel: View {
+    @Environment(AppModel.self) private var model
+
+    var body: some View {
+        Text(clockText(model.elapsed))
+            .font(Typo.title(17, .medium))
+            .monospacedDigit()
+            .foregroundStyle(Ink.brassSoft)
     }
 }

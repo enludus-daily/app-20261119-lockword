@@ -4,7 +4,7 @@ import SwiftUI
 struct GridView: View {
     @Environment(AppModel.self) private var model
     let board: Board
-    var maxCell: CGFloat = 54
+    var maxCell: CGFloat = 64
 
     var body: some View {
         GeometryReader { geo in
