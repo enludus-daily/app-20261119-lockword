@@ -11,7 +11,7 @@ enum Lang {
 
     static var locale: Locale { Locale(identifier: isJapanese ? "ja_JP" : "en_US") }
 
-    nonisolated(unsafe) static let english: Bundle? = Bundle.main.path(forResource: "en", ofType: "lproj").flatMap(Bundle.init(path:))
+    static let english: Bundle? = Bundle.main.path(forResource: "en", ofType: "lproj").flatMap(Bundle.init(path:))
 }
 
 /// 言葉を選ぶ（日本語, 英語）

@@ -1,21 +1,21 @@
 {
   "_doc": "App Store Connect に API で入れる情報（.github/workflows/asc.yml の metadata が読む）。文字数：name・subtitle 30、keywords 100（カンマ区切り）、promotionalText 170、description 4000。カテゴリの ID は EDUCATION・PRODUCTIVITY・UTILITIES・LIFESTYLE・HEALTH_AND_FITNESS など。審査への提出と App プライバシーの申告は本人が行う。",
   "locale": "ja",
-  "name": "",
-  "subtitle": "",
-  "primaryCategory": "",
-  "secondaryCategory": "",
+  "name": "カギことば：クロスワード脱出",
+  "subtitle": "解いた言葉が鍵になる、夜の屋敷",
+  "primaryCategory": "GAMES",
+  "secondaryCategory": "ENTERTAINMENT",
   "supportUrl": "https://github.com/enludus-daily/app-20261119-lockword/issues",
   "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261119-lockword/blob/main/PRIVACY.md",
-  "keywords": "",
-  "promotionalText": "",
-  "description": "",
-  "whatToTest": "",
+  "keywords": "クロスワード,脱出ゲーム,謎解き,パズル,言葉,単語,ワード,クロスワードパズル,毎日,脳トレ,洋館,カタカナ",
+  "promotionalText": "部屋の物に刻まれた小さなクロスワード。「カギ」を解けば鍵が手に入り、次の錠が開く。毎日 5 分の今日の小部屋つき。",
+  "description": "夜の古い屋敷に閉じこめられた。扉には文字盤があり、鍵はどこにもない。\n\n部屋の物——肖像画、長持ち、柱時計、金庫——それぞれに、小さなクロスワードが刻まれている。解いた言葉は、そのまま道具になる。「カギ」を解けば鍵が手に入り、鍵のかかった長持ちが開く。「ロウソク」を解けば、暗い扉の鍵穴が見える。\n\n盤の真鍮の丸のマスの文字を 4 つ集めて並べ替えると、最後の扉が開く。\n\n■ 遊び方\n・物をタップするとクロスワードが開く\n・マスを押して語を選び、木の札から文字を選ぶ（同じマスをもう一度押すと縦と横が切り替わる）\n・ヒントは 3 段階：1 文字 → 意味 → 答え。ヒントが少ないほど星が増える\n・道具を集めて錠を開け、扉の文字をそろえて脱出\n\n■ 中身\n・屋敷の 4 部屋（書斎・音楽室・天文室・時計塔）。1 部屋 10〜15 分、言葉 16\n・今日の小部屋：毎日 1 つ、5 語・5 分のクロスワード。続けた日数が記録に残る\n・すべて手で作った問題（日本語と英語は別の問題）\n\n■ Pro（買い切り）\n・天文室と時計塔の 2 部屋と、物語の結末\n・答えのヒントを何度でも\n・過去 14 日の小部屋\n\n■ プライバシー\n記録は端末の中だけに保存し、外に送りません。ログイン・広告・解析はありません。",
+  "whatToTest": "広間 → 第一の部屋（伯爵の書斎）に入り、肖像画のクロスワードを解いてください。「カギ」が解けると鍵がトレイに入り、長持ちの錠が外れます。4 つの物を解いたら「扉の文字盤を回す」で文字を並べて脱出。今日の小部屋（広間の下のボタン）と、Pro の購入・復元（設定 > 屋敷のすべての部屋を開く）も確かめてください。",
   "en-US": {
-    "name": "",
-    "subtitle": "",
-    "keywords": "",
-    "promotionalText": "",
-    "description": ""
+    "name": "Lockword: Crossword Escape",
+    "subtitle": "Solve words. Unlock the manor.",
+    "keywords": "crossword,escape room,word puzzle,mini crossword,daily,riddle,mystery,brain,clues,manor,key",
+    "promotionalText": "Every object in the manor hides a tiny crossword. Solve KEY and you get a key that opens the next lock. Plus a five-minute nook every day.",
+    "description": "You wake up locked inside an old manor at night. The door has letter dials, and there is no key anywhere.\n\nEvery object in the room — a portrait, a chest, a grandfather clock, a safe — hides a tiny crossword. And every answer becomes a tool. Solve KEY and you get a key that opens the locked chest. Solve CANDLE and you can finally see the keyhole.\n\nCollect the letters in the brass-circled squares, put them in order, and the final door swings open.\n\nHOW TO PLAY\n- Tap an object to open its crossword\n- Tap a square to pick a word, then choose letters from the wooden tiles (tap again to switch across/down)\n- Three levels of hints: a letter, the meaning, the answer. Fewer hints, more stars\n- Gather tools, open locks, set the dials, escape\n\nWHAT'S INSIDE\n- Four rooms: the Study, the Music Room, the Observatory and the Clock Tower. 10–15 minutes and 16 words each\n- Today's nook: one five-word, five-minute crossword every day, with a streak\n- Every puzzle is handmade. English puzzles are written in English, not translated\n\nPRO (ONE-TIME PURCHASE)\n- Two more rooms and the ending of the story\n- Unlimited answer hints\n- The last 14 days of nooks\n\nPRIVACY\nYour progress stays on your device. No login, ads or analytics."
   }
 }

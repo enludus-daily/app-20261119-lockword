@@ -57,6 +57,9 @@ struct CellView: View {
     }
 
     var body: some View {
+        let bounce = solvedIndex != nil && !reduceMotion
+        let delay = Double(solvedIndex ?? 0) * 0.055
+        let shake = wrongHere && !reduceMotion
         Button {
             model.select(cell)
         } label: {
@@ -90,9 +93,8 @@ struct CellView: View {
             .frame(width: side - 3, height: side - 3)
             .frame(width: side, height: side)
             .keyframeAnimator(initialValue: CGFloat(1), trigger: model.wordTick) { v, scale in
-                v.scaleEffect(solvedIndex == nil || reduceMotion ? 1 : scale)
+                v.scaleEffect(bounce ? scale : 1)
             } keyframes: { _ in
-                let delay = Double(solvedIndex ?? 0) * 0.055
                 KeyframeTrack {
                     LinearKeyframe(1, duration: max(0.001, delay))
                     SpringKeyframe(1.16, duration: 0.14)
@@ -100,7 +102,7 @@ struct CellView: View {
                 }
             }
             .keyframeAnimator(initialValue: CGFloat(0), trigger: model.wrongTick) { v, x in
-                v.offset(x: wrongHere && !reduceMotion ? x : 0)
+                v.offset(x: shake ? x : 0)
             } keyframes: { _ in
                 KeyframeTrack {
                     LinearKeyframe(-7, duration: 0.05)

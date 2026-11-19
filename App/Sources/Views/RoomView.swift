@@ -138,7 +138,7 @@ struct RoomScene: View {
         let progress = model.roomProgress(index)
         GeometryReader { geo in
             let w = geo.size.width, h = geo.size.height
-            let objW = min(w * 0.34, 170)
+            let objW = min(w * 0.31, 170)
             let objH = min(h * 0.4, objW * 1.25)
             let spots = [CGPoint(x: w * 0.19, y: h * 0.27), CGPoint(x: w * 0.81, y: h * 0.27), CGPoint(x: w * 0.19, y: h * 0.74), CGPoint(x: w * 0.81, y: h * 0.74)]
             ZStack {
@@ -178,6 +178,8 @@ struct ObjectButton: View {
         let op = progress.object(objectIndex)
         let canOpen = Inventory.canOpen(objectIndex, room: room, progress: progress)
         let needsItem = object.requires != nil && !op.unlocked
+        let shakeMe = model.lockedNotice == objectIndex && !reduceMotion
+        let wobble = model.unlocking == objectIndex && !reduceMotion
         Button { model.tapObject(objectIndex) } label: {
             VStack(spacing: 6) {
                 ZStack(alignment: .topTrailing) {
@@ -198,7 +200,7 @@ struct ObjectButton: View {
                 }
             }
             .keyframeAnimator(initialValue: CGFloat(0), trigger: model.wrongTick) { v, x in
-                v.offset(x: model.lockedNotice == objectIndex && !reduceMotion ? x : 0)
+                v.offset(x: shakeMe ? x : 0)
             } keyframes: { _ in
                 KeyframeTrack {
                     LinearKeyframe(-6, duration: 0.05)
@@ -208,7 +210,7 @@ struct ObjectButton: View {
                 }
             }
             .keyframeAnimator(initialValue: CGFloat(0), trigger: model.unlockTick) { v, angle in
-                v.rotationEffect(.degrees(model.unlocking == objectIndex && !reduceMotion ? angle : 0))
+                v.rotationEffect(.degrees(wobble ? angle : 0))
             } keyframes: { _ in
                 KeyframeTrack {
                     SpringKeyframe(-4, duration: 0.12)

@@ -63,7 +63,7 @@ struct RootView: View {
         .sensoryFeedback(trigger: model.wordTick) { _, _ in model.hapticsOn ? .impact(weight: .medium) : nil }
         .sensoryFeedback(trigger: model.itemTick) { _, _ in model.hapticsOn ? .impact(weight: .heavy) : nil }
         .sensoryFeedback(trigger: model.wrongTick) { _, _ in model.hapticsOn ? .error : nil }
-        .sensoryFeedback(trigger: model.unlockTick) { _, _ in model.hapticsOn ? .impact(weight: .rigid) : nil }
+        .sensoryFeedback(trigger: model.unlockTick) { _, _ in model.hapticsOn ? .impact(flexibility: .rigid) : nil }
         .sensoryFeedback(trigger: model.completeTick) { _, _ in model.hapticsOn ? .success : nil }
         .sensoryFeedback(trigger: model.escapeTick) { _, _ in model.hapticsOn ? .success : nil }
         .task { await Launch.run(model) }

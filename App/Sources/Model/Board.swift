@@ -177,7 +177,7 @@ struct Board: Equatable {
         if isSolved(before) {
             return .solved(entry: before, item: before == puzzle.itemEntry, complete: isComplete)
         }
-        if let other = touched.first(where: { $0 != before && isSolved($0) && !wasSolved($0, without: cell) }) {
+        if !full, let other = touched.first(where: { $0 != before && isSolved($0) && !wasSolved($0, without: cell) }) {
             return .solved(entry: other, item: other == puzzle.itemEntry, complete: isComplete)
         }
         if full {

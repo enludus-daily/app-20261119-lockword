@@ -12,6 +12,7 @@ struct DoorOverlay: View {
             Ink.deep.opacity(0.97).ignoresSafeArea()
             WoodWall(lamp: UnitPoint(x: 0.5, y: 0.2)).opacity(0.6).ignoresSafeArea()
             if let d = model.door {
+                let calm = reduceMotion
                 VStack(spacing: 18) {
                     HStack {
                         Spacer()
@@ -38,7 +39,7 @@ struct DoorOverlay: View {
                         }
                     }
                     .keyframeAnimator(initialValue: CGFloat(0), trigger: d.wrong) { v, x in
-                        v.offset(x: reduceMotion ? 0 : x)
+                        v.offset(x: calm ? 0 : x)
                     } keyframes: { _ in
                         KeyframeTrack {
                             LinearKeyframe(-9, duration: 0.06)
